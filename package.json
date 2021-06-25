@@ -1,0 +1,34 @@
+{
+  "name": "apollo-fastify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "NODE_PATH=./src nodemon 'src/infrastructure/graphql/server.ts' --exec 'ts-node' server.ts -e ts,graphql | pino-pretty",
+    "test": "jest",
+    "test:watch": "jest --verbose --detectOpenHandles"
+  },
+  "dependencies": {
+    "@graphql-tools/merge": "6.2.14",
+    "@types/pino": "^6.3.8",
+    "apollo-server-fastify": "2.18.1",
+    "apollo-server-types": "^0.9.0",
+    "fastify": "2.14.1",
+    "fastify-cookie": "^5.3.1",
+    "graphql": "15.5.1",
+    "pino": "^6.11.3",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.4",
+    "jest": "^27.0.5",
+    "nodemon": "^2.0.7",
+    "pino-pretty": "^5.1.0",
+    "prettier": "^2.3.1",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.4"
+  }
+}
