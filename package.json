@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "NODE_PATH=./src nodemon 'src/infrastructure/graphql/server.ts' --exec 'ts-node' server.ts -e ts,graphql | pino-pretty",
-    "test": "jest",
+    "test": "NODE_PATH=./src jest",
     "test:watch": "jest --verbose --detectOpenHandles"
   },
   "dependencies": {

@@ -1,7 +1,7 @@
 import { mock, MockProxy } from "jest-mock-extended";
 import { UserDataProvider } from "user/domain/provider/UserDataProvider";
 import { User } from "user/domain/entity/User";
-import { GetUserByIdUseCase } from "./GetUserByIdUseCase";
+import { GetUserByIdUseCase } from "user/usecase/GetUserByIdUseCase";
 
 describe("Get user by ID use case", () => {
   let userDataProvider: MockProxy<UserDataProvider>;

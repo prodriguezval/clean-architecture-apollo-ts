@@ -1,6 +1,6 @@
 import { ProductDataProvider } from "product/domain/provider/ProductDataProvider";
 import { mock, MockProxy } from "jest-mock-extended";
-import { GetAllProductsUseCase } from "./GetAllProductsUseCase";
+import { GetAllProductsUseCase } from "product/usecase/GetAllProductsUseCase";
 import { Product } from "product/domain/entity/Product";
 
 describe("Get all Products Use Case", () => {
