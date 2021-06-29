@@ -8,11 +8,11 @@ export class UserRepository implements UserDataProvider {
     { name: "Vega", address: "Los volcanes", id: "3" },
   ];
 
-  getUserById(id: string): User {
+  getUserById(id: string): Promise<User> {
     const user = this.allUsers.find((user) => user.id === id);
     if (user === undefined) {
       throw new Error(`User ${id} not found`);
     }
-    return user;
+    return Promise.resolve(user);
   }
 }

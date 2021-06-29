@@ -24,6 +24,7 @@
     "@types/node": "^15.12.4",
     "@types/pino": "^6.3.8",
     "jest": "^27.0.5",
+    "jest-mock-extended": "^1.0.16",
     "nodemon": "^2.0.7",
     "pino-pretty": "^5.1.0",
     "prettier": "^2.3.1",

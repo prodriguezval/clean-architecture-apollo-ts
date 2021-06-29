@@ -7,7 +7,7 @@ export class ProductRepository implements ProductDataProvider {
     { id: "2", name: "Diapers", quantity: 5 },
     { id: "3", name: "Orange", quantity: 5 },
   ];
-  getAllProducts(): Product[] {
-    return this.allProducts;
+  getAllProducts(): Promise<Product[]> {
+    return Promise.resolve(this.allProducts);
   }
 }
