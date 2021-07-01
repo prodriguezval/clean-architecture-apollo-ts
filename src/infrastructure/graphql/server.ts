@@ -7,10 +7,11 @@ import cookie from "fastify-cookie";
 import { validateRequest } from "infrastructure/graphql/middleware/validateRequest";
 import { contextBuilder } from "infrastructure/graphql/middleware/contextBuilder";
 import { logger } from "infrastructure/logger/loggerConfig";
-const app = fastify();
+
+export const app = fastify();
 const port = 3000;
 
-const server = new ApolloServer({
+export const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: contextBuilder,
@@ -26,11 +27,10 @@ const server = new ApolloServer({
     },
   ],
 });
-
-(async function () {
+export const main = async () => {
   await server.start();
   app.register(cookie);
   app.register(server.createHandler());
   await app.listen(port);
   logger().info("GraphQL server started");
-})();
+};

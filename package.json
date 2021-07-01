@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start:dev": "NODE_PATH=./src nodemon 'src/infrastructure/graphql/server.ts' --exec 'ts-node' server.ts -e ts,graphql | pino-pretty",
+    "start:dev": "NODE_PATH=./src nodemon 'src/infrastructure/graphql/start.ts' --exec 'ts-node' server.ts -e ts,graphql | pino-pretty",
     "test": "jest",
     "test:watch": "jest --verbose --detectOpenHandles"
   },
@@ -23,11 +23,13 @@
     "@types/jest": "^26.0.23",
     "@types/node": "^15.12.4",
     "@types/pino": "^6.3.8",
+    "@types/supertest": "^2.0.11",
     "jest": "^27.0.5",
     "jest-mock-extended": "^1.0.16",
     "nodemon": "^2.0.7",
     "pino-pretty": "^5.1.0",
     "prettier": "^2.3.1",
+    "supertest": "^6.1.3",
     "ts-jest": "^27.0.3",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.4"
