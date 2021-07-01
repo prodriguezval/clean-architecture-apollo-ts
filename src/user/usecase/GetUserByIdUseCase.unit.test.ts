@@ -3,6 +3,9 @@ import { UserDataProvider } from "user/domain/provider/UserDataProvider";
 import { User } from "user/domain/entity/User";
 import { GetUserByIdUseCase } from "user/usecase/GetUserByIdUseCase";
 
+/**
+ * @group unit
+ */
 describe("Get user by ID use case", () => {
   let userDataProvider: MockProxy<UserDataProvider>;
   let getUserByIdUseCase: GetUserByIdUseCase;

@@ -2,6 +2,9 @@ import { app, main, server } from "infrastructure/graphql/server";
 import request from "supertest";
 import { Product } from "product/domain/entity/Product";
 
+/**
+ * @group e2e
+ */
 describe("Server test", () => {
   beforeAll(async () => {
     await main();

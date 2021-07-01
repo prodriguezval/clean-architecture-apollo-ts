@@ -5,6 +5,9 @@ import { ProductUseCaseConfiguration } from "product/configuration/ProductUseCas
 import { productSchema } from "product/infrastructure/graphql/productSchema";
 import { productResolver } from "product/infrastructure/graphql/productResolver";
 
+/**
+ * @group integration
+ */
 describe("Product Operations", () => {
   let server: ApolloServer;
   const GET_ALL_PRODUCTS = `

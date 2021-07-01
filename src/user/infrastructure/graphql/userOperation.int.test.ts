@@ -6,6 +6,9 @@ import { container } from "tsyringe";
 import { UserDataProviderConfiguration } from "user/configuration/UserDataProviderConfiguration";
 import { GetUserByIdUseCase } from "user/usecase/GetUserByIdUseCase";
 
+/**
+ * @group integration
+ */
 describe("User GraphQL Operation", () => {
   let server: ApolloServer;
   const GET_USER_BY_ID = `

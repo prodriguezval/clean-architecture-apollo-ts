@@ -3,6 +3,10 @@ import { mock, MockProxy } from "jest-mock-extended";
 import { GetAllProductsUseCase } from "product/usecase/GetAllProductsUseCase";
 import { Product } from "product/domain/entity/Product";
 
+/**
+ * @group unit
+ */
+
 describe("Get all Products Use Case", () => {
   let productDataProvider: MockProxy<ProductDataProvider>;
   let getAllProductsUseCase: GetAllProductsUseCase;
